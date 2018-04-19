@@ -1,0 +1,35 @@
+{
+  "name": "weex-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --config webpack.dev.conf.js --hot",
+    "build": "webpack --config webpack.prod.conf.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^8.3.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "ip": "^1.1.5",
+    "portfinder": "^1.0.13",
+    "postcss-plugin-px2rem": "^0.7.0",
+    "postcss-plugin-weex": "^0.1.6",
+    "rimraf": "^2.6.2",
+    "uglifyjs-webpack-plugin": "^1.2.4",
+    "vue-loader": "^14.2.2",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.2",
+    "webpack-merge": "^4.1.2",
+    "weex-loader": "^0.7.3",
+    "weex-vue-precompiler": "^0.1.17"
+  },
+  "dependencies": {
+    "vue": "^2.5.16",
+    "weex-vue-render": "^1.0.20"
+  }
+}
