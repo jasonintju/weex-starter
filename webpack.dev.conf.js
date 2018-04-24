@@ -28,12 +28,16 @@ const webConfig = webpackMerge(commonConfig[0], {
   }
 });
 
-portfinder.getPort((err, port) => {
-  if (err) {
-    console.log(err);
-  } else {
-    webConfig.devServer.port = port;
-  }
-});
-
-module.exports = webConfig;
+module.exports = () => {
+  return new Promise((resolve, reject) => {
+    portfinder.basePort = 8080;
+    portfinder.getPort((err, port) => {
+      if (err) {
+        reject(err);
+      } else {
+        webConfig.devServer.port = port;
+        resolve(webConfig);
+      }
+    });
+  });
+};
